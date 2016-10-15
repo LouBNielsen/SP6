@@ -1,0 +1,8 @@
+<div class='myForm' value='Submit' ng-controller="personController as pCtrl" ng-submit="pCtrl.addPerson()">
+    <form  >
+        <label>ID: <input type='number' ng-model="pCtrl.person.id" ></label>
+        <label>Name:<input type='text' ng-model="pCtrl.person.name" ></label>
+        <label>Age:<input type='number' ng-model="pCtrl.person.age" ></label>
+        <input type='submit' > 
+    </form>
+</div>

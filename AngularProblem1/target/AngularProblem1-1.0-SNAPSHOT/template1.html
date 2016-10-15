@@ -1,0 +1,22 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Id</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="person in pCtrl.persons">
+                <td>{{person.name}}</td>
+                <td><a href="#{{pCtrl.persons.indexOf(person)}}" ng-click="pCtrl.indexNumber = pCtrl.persons.indexOf(person)">{{person.id}}</a></td>            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script type="text/ng-template" id="details.html">
+<h2>Details</h2>
+<p>Id: {{pCtrl.persons[pCtrl.indexNumber].id}} </p>
+<p>Name: {{pCtrl.persons[pCtrl.indexNumber].name}}</p>
+<p>Age: {{pCtrl.persons[pCtrl.indexNumber].age}}</p>
+</script>
